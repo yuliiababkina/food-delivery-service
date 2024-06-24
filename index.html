@@ -3,48 +3,61 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+
         <title>Food delivery service</title>
     </head>
     <body>
-        <head>
+        <header>
             <a href="/">
                 <img src="" alt="" />
             </a>
             <nav>
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a class="navbar-link" href="/">Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a class="navbar-link" href="">About</a>
                     </li>
                     <li>
-                        <a href="">Service</a>
+                        <a class="navbar-link" href="">Service</a>
                     </li>
                     <li>
-                        <a href="">Menu</a>
+                        <a class="navbar-link" href="">Menu</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a class="navbar-link" href="">Contact</a>
                     </li>
                 </ul>
             </nav>
-            <button type="button">Order Now</button>
-        </head>
+            <button class="navbar-button" type="button">Order Now</button>
+        </header>
         <main>
-            <section>
-                <h1>Enjoy Your Favorite Food From Anywhere</h1>
-                <p>
+            <section class="hero-section">
+                <h1 class="hero-title">
+                    Enjoy Your Favorite Food From Anywhere
+                </h1>
+                <p class="hero-text">
                     With just a few clicks, you can have your favorite meals
                     delivered straight to your doorstep, no matter where you
                     are. Order now and enjoy a hassle-free and delicious meal
                     from the comfort of your own home.
                 </p>
-                <button type="button">Order Now</button>
+                <button class="hero-button" type="button">Order Now</button>
             </section>
-            <section>
+            <section class="benefits-section">
                 <img src="./images/green-apple.png" alt="Green apple" />
-                <h2>What's Special About Our Offerings</h2>
+                <h2 class="section-title">
+                    What's Special About Our Offerings
+                </h2>
                 <p>
                     With our platform, you can browse through a diverse
                     selection of cuisines and local restaurants, and choose from
@@ -53,8 +66,8 @@
                 <ul>
                     <li>
                         <img src="" alt="" />
-                        <h3>Fasest Delivery</h3>
-                        <p>
+                        <h3 class="benefits-item-title">Fasest Delivery</h3>
+                        <p class="benefits-item-text">
                             Our advanced logistics system and dedicated delivery
                             partners ensure that your meals are delivered to you
                             within 30-minutes.
@@ -62,18 +75,20 @@
                     </li>
                     <li>
                         <img src="" alt="" />
-                        <h3>Easy To Order</h3>
-                        <p>
+                        <h3 class="benefits-item-title">Easy To Order</h3>
+                        <p class="benefits-item-text">
                             You can browse through a wide variety of cuisines
                             and restaurants, select your favorite meals, and
                             place your order in just a few clicks.
                         </p>
                     </li>
                 </ul>
-                <button type="button">Order Now</button>
+                <button class="benefit-section-button" type="button">
+                    Order Now
+                </button>
             </section>
             <section>
-                <h2>Some of Our Favorites</h2>
+                <h2 class="section-title">Some of Our Favorites</h2>
                 <p>Looking for something delicious?</p>
                 <ul>
                     <li>
@@ -95,8 +110,8 @@
                     </li>
                 </ul>
             </section>
-            <section>
-                <h2>What our Customers Say</h2>
+            <section class="reviews-section">
+                <h2 class="section-title">What our Customers Say</h2>
                 <p>
                     Don't just take our word for it - see what our satisfied
                     customers have to say
@@ -104,13 +119,15 @@
                 <!-- Додати список відгуків -->
             </section>
             <section>
-                <h2>Subscribe To Get Special Offers</h2>
+                <h2 class="section-title">Subscribe To Get Special Offers</h2>
                 <p>
                     Order now and receive 10% off your first meal with Enjoy
                     Your Favorite Food From Anywhere.
                 </p>
                 <!-- Додати рядок для підписки -->
-                <button type="button">Subscribe</button>
+                <button class="subscribe-button" type="button">
+                    Subscribe
+                </button>
                 <img src="./images/banan.jpg" alt="Banan" />
             </section>
         </main>
@@ -120,40 +137,42 @@
             </a>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a class="navbar-link" href="/">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a class="navbar-link" href="">About</a>
                 </li>
                 <li>
-                    <a href="">Service</a>
+                    <a class="navbar-link" href="">Service</a>
                 </li>
                 <li>
-                    <a href="">Menu</a>
+                    <a class="navbar-link" href="">Menu</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a class="navbar-link" href="">Contact</a>
                 </li>
             </ul>
-            <h3>Subscribe</h3>
+            <h3 class="footer-title">Subscribe</h3>
             <!-- Додати рядок для підписки -->
-            <button type="button">Subscribe</button>
-            <p>
+            <button class="footer-button" type="button">Subscribe</button>
+            <p class="footer-text">
                 By subscribing you agree to with our
-                <a href="#"><span>Privacy Policy</span></a>
+                <a href="#"
+                    ><span class="footer-text-accent">Privacy Policy</span></a
+                >
             </p>
             <ul>
                 <li>
-                    <a href="#">Privacy Policy</a>
+                    <a class="footer-menu-accent" href="#">Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="#">Terms of Service</a>
+                    <a class="footer-menu-accent" href="#">Terms of Service</a>
                 </li>
                 <li>
-                    <a href="#">Cookies Settings</a>
+                    <a class="footer-menu-accent" href="#">Cookies Settings</a>
                 </li>
             </ul>
-            <p>2022 FoodSta. All right reserved.</p>
+            <p class="footer-text">2022 FoodSta. All right reserved.</p>
         </footer>
     </body>
 </html>

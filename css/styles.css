@@ -1,0 +1,120 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c2c2c;
+    max-width: 100%;
+    margin: auto;
+    background: #fefefe;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.navbar-link {
+    font-weight: 400;
+    font-size: 14px;
+    color: #2c2c2c;
+}
+
+.navbar-button,
+.hero-button {
+    border-radius: 30px;
+    padding: 6px 17px;
+    width: 120px;
+    height: 32px;
+    background: #bbf330;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    /* text-align: right; */
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.benefits-section {
+    /* height: 840px; */
+    background-color: #ffe550;
+}
+
+.benefits-item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.benefits-item-text {
+    font-size: 14px;
+}
+
+.benefit-section-button {
+    border: 2px solid #7eb101;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 120px;
+    height: 40px;
+    background: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.reviews-section {
+    background-color: #ffe550;
+}
+
+.subscribe-button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 103px;
+    height: 42px;
+    background: #bbf330;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.footer-button {
+    border: 0.85px solid #7eb101;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 103px;
+    height: 42px;
+    background: #fff;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.footer-text-accent,
+.footer-menu-accent {
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #7eb101;
+}
