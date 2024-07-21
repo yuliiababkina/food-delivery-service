@@ -1,5 +1,8 @@
 body {
     font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -9,6 +12,77 @@ a {
 ul,
 ol {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1249px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c2c2c;
+    text-align: center;
+
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    width: 98px;
+    height: 32px;
+    background-color: #bbf330;
+}
+
+/* Header */
+
+.header {
+    box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
+    background-color: #fefefe;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-logo {
+    margin-right: auto;
+}
+
+.header-navbar {
+    margin-right: 30px;
+}
+
+.header-list {
+    display: flex;
+    gap: 28px;
 }
 
 .header-link,
@@ -16,72 +90,166 @@ ol {
     font-weight: 400;
     font-size: 14px;
     color: #2c2c2c;
+    padding-top: 28px;
+    padding-bottom: 28px;
 }
 
-.header-button,
-.hero-button,
-.subscribe-button {
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    text-align: right;
-    color: #2c2c2c;
+/* Hero */
+
+.hero-section {
+    padding-top: 14px;
+    padding-bottom: 70px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 144px;
+}
+
+.hero-img {
+    border-radius: 100%;
+    background-color: #fefefe;
+    border: 26px solid #ffe550;
+}
+
+.hero-img img {
+    border-radius: 100%;
 }
 
 .hero-title {
-    font-weight: 700;
     font-size: 48px;
     line-height: 1.2;
     color: #2c2c2c;
+    margin-bottom: 28px;
 }
 
 .hero-text {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     color: #2c2c2c;
+    margin-bottom: 40px;
 }
 
-.section-title {
-    font-weight: 700;
+/* Benefits */
+
+.benefits-section {
+    background-color: #ffe550;
+    padding-top: 114px;
+    padding-bottom: 124px;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits-img-wrapper {
+    margin-right: 90px;
+}
+
+.benefits-title {
     font-size: 42px;
-    text-align: center;
+    line-height: 1.2;
     color: #2c2c2c;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .benefits-section-text {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     color: #2c2c2c;
+    margin-bottom: 40px;
+    max-width: 500px;
 }
 
-.benefits-item h3 {
-    font-weight: 700;
+.benefits-list {
+    display: flex;
+    gap: 66px;
+    margin-bottom: 32px;
+}
+
+.benefits-item {
+    flex-basis: calc(100% - 66px) / 2;
+}
+
+.svg-wrapper {
+    border-radius: 100%;
+    background-color: #fefefe;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.benefits-subtitle {
     font-size: 18px;
     line-height: 1.4;
     color: #2c2c2c;
+    margin-bottom: 16px;
 }
 
-.benefits-item p {
-    font-weight: 400;
+.benefits-subtext {
     font-size: 14px;
     line-height: 1.5;
     color: #2c2c2c;
 }
 
-.benefit-section-button {
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
+.benefits-btn {
+    border: 2px solid #7eb101;
+    border-radius: 30px;
+    width: 106px;
+    height: 40px;
+    background-color: #fff;
+}
+
+/* Offers */
+
+.offerings-section {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.offerings-title {
+    font-size: 42px;
+    text-align: center;
     color: #2c2c2c;
+    margin-bottom: 20px;
 }
 
 .offerings-text {
-    font-weight: 400;
-    font-size: 16px;
     text-align: center;
     color: #2c2c2c;
+    margin-bottom: 40px;
+}
+
+.offerings-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.offerings-item {
+    border: 16px solid #ffe550;
+    border-radius: 197px;
+    background-color: #fefefe;
+    padding: 24px;
+
+    flex-basis: calc(100% - 2 * 32px) / 3;
+}
+
+.offerings-link img {
+    border-radius: 100%;
+}
+
+.offerings-link {
+    width: 100%;
+    height: 100%;
 }
 
 .reviews-text {

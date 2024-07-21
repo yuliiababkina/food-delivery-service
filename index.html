@@ -15,107 +15,188 @@
     </head>
     <body>
         <header class="header">
-            <a class="header-logo" href="/">
-                <img
-                    src="./images/food-delivery-logo.svg"
-                    alt="Food delivery logo"
-                />
-            </a>
-            <nav class="header-navbar">
-                <ul class="header-list">
-                    <li class="header-item">
-                        <a class="header-link" href="/">Home</a>
-                    </li>
-                    <li class="header-item">
-                        <a class="header-link" href="">About</a>
-                    </li>
-                    <li class="header-item">
-                        <a class="header-link" href="">Service</a>
-                    </li>
-                    <li class="header-item">
-                        <a class="header-link" href="">Menu</a>
-                    </li>
-                    <li class="header-item">
-                        <a class="header-link" href="">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header-button" type="button">Order Now</button>
+            <div class="container header-container">
+                <a class="header-logo" href="/">
+                    <svg class="logo-icon" width="66" height="52">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
+                </a>
+                <nav class="header-navbar">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <a class="header-link" href="/">Home</a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-link" href="">About</a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-link" href="">Service</a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-link" href="">Menu</a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-link" href="">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button header-btn" type="button">
+                    Order Now
+                </button>
+            </div>
         </header>
         <main>
             <section class="hero-section">
-                <h1 class="hero-title">
-                    Enjoy Your Favorite Food From Anywhere
-                </h1>
-                <p class="hero-text">
-                    With just a few clicks, you can have your favorite meals
-                    delivered straight to your doorstep, no matter where you
-                    are. Order now and enjoy a hassle-free and delicious meal
-                    from the comfort of your own home.
-                </p>
-                <button class="hero-button" type="button">Order Now</button>
-                <img
-                    src="./images/hero-section-img.jpg"
-                    alt="Greek salad in a glass bowl"
-                    width="528"
-                />
+                <div class="container hero-container">
+                    <div class="hero-content-wrapper">
+                        <h1 class="hero-title">
+                            Enjoy Your Favorite Food From Anywhere
+                        </h1>
+                        <p class="hero-text">
+                            With just a few clicks, you can have your favorite
+                            meals delivered straight to your doorstep, no matter
+                            where you are. Order now and enjoy a hassle-free and
+                            delicious meal from the comfort of your own home.
+                        </p>
+                        <button class="button hero-btn" type="button">
+                            Order Now
+                        </button>
+                    </div>
+                    <div class="hero-img-wrapper">
+                        <img
+                            src="./images/hero-section-img.jpg"
+                            alt="Greek salad in a glass bowl"
+                            width="528"
+                        />
+                    </div>
+                </div>
             </section>
             <section class="benefits-section">
-                <img src="./images/green-apple.png" alt="Green apple" />
-                <h2 class="section-title">
-                    What's Special About Our Offerings
-                </h2>
-                <p class="benefits-section-text">
-                    With our platform, you can browse through a diverse
-                    selection of cuisines and local restaurants, and choose from
-                    a variety of dishes that cater to your specific taste buds.
-                </p>
-                <ul class="benefits-list">
-                    <li class="benefits-item">
-                        <img src="" alt="" />
-                        <h3>Fasest Delivery</h3>
-                        <p>
-                            Our advanced logistics system and dedicated delivery
-                            partners ensure that your meals are delivered to you
-                            within 30-minutes.
+                <div class="container benefits-container">
+                    <div class="benefits-img-wrapper">
+                        <img src="./images/green-apple.png" alt="Green apple" />
+                    </div>
+                    <div class="benefits-text-wrapper">
+                        <h2 class="benefits-title">
+                            What's Special About Our Offerings
+                        </h2>
+                        <p class="benefits-section-text">
+                            With our platform, you can browse through a diverse
+                            selection of cuisines and local restaurants, and
+                            choose from a variety of dishes that cater to your
+                            specific taste buds.
                         </p>
-                    </li>
-                    <li class="benefits-item">
-                        <img src="" alt="" />
-                        <h3>Easy To Order</h3>
-                        <p>
-                            You can browse through a wide variety of cuisines
-                            and restaurants, select your favorite meals, and
-                            place your order in just a few clicks.
-                        </p>
-                    </li>
-                </ul>
-                <button class="benefit-section-button" type="button">
-                    Order Now
-                </button>
+                        <ul class="benefits-list">
+                            <li class="benefits-item">
+                                <div class="svg-wrapper">
+                                    <svg
+                                        class="benefits-icon"
+                                        width="32"
+                                        height="32"
+                                    >
+                                        <use
+                                            href="./images/icons.svg#icon-rocket"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="benefits-subtitle">
+                                    Fasest Delivery
+                                </h3>
+                                <p class="benefits-subtext">
+                                    Our advanced logistics system and dedicated
+                                    delivery partners ensure that your meals are
+                                    delivered to you within 30-minutes.
+                                </p>
+                            </li>
+                            <li class="benefits-item">
+                                <div class="svg-wrapper">
+                                    <svg
+                                        class="benefits-icon"
+                                        width="32"
+                                        height="32"
+                                    >
+                                        <use
+                                            href="./images/icons.svg#icon-touch-app"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="benefits-subtitle">Easy To Order</h3>
+                                <p class="benefits-subtext">
+                                    You can browse through a wide variety of
+                                    cuisines and restaurants, select your
+                                    favorite meals, and place your order in just
+                                    a few clicks.
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="button benefits-btn" type="button">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
             </section>
             <section class="offerings-section">
-                <h2 class="section-title">Some of Our Favorites</h2>
-                <p class="offerings-text">Looking for something delicious?</p>
-                <ul>
-                    <li>
-                        <img src="./images/hamburger.jpg" alt="Hamburger" />
-                    </li>
-                    <li><img src="./images/pasta.jpg" alt="Pasta" /></li>
-                    <li><img src="./images/pizza.jpg" alt="Pizza" /></li>
-                    <li>
-                        <img
-                            src="./images/chicken.jpg"
-                            alt="Chicken and rice"
-                        />
-                    </li>
-                    <li>
-                        <img src="./images/salad.jpg" alt="Vegetable salad" />
-                    </li>
-                    <li>
-                        <img src="./images/borshch.jpg" alt="Soup borshch" />
-                    </li>
-                </ul>
+                <div class="container offerings-container">
+                    <h2 class="offerings-title">Some of Our Favorites</h2>
+                    <p class="offerings-text">
+                        Looking for something delicious?
+                    </p>
+                    <ul class="offerings-list">
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#"
+                                ><img
+                                    src="./images/hamburger.jpg"
+                                    alt="Hamburger"
+                                    width="315"
+                            /></a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <img
+                                    src="./images/pasta.jpg"
+                                    alt="Pasta"
+                                    width="315"
+                                />
+                            </a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <img
+                                    src="./images/pizza.jpg"
+                                    alt="Pizza"
+                                    width="315"
+                                />
+                            </a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <img
+                                    src="./images/chicken.jpg"
+                                    alt="Chicken and rice"
+                                    width="315"
+                                />
+                            </a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <img
+                                    src="./images/salad.jpg"
+                                    alt="Vegetable salad"
+                                    width="315"
+                                />
+                            </a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <img
+                                    src="./images/borshch.jpg"
+                                    alt="Soup borshch"
+                                    width="315"
+                                />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="reviews-section">
                 <h2 class="section-title">What our Customers Say</h2>
