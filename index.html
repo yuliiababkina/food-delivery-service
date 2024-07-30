@@ -11,6 +11,14 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+            integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
@@ -40,7 +48,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="button header-btn" type="button">
+                <button class="header-btn" type="button" data-modal-open>
                     Order Now
                 </button>
             </div>
@@ -48,7 +56,7 @@
         <main>
             <section class="hero-section">
                 <div class="container hero-container">
-                    <div class="hero-content-wrapper">
+                    <div class="hero-wrapper">
                         <h1 class="hero-title">
                             Enjoy Your Favorite Food From Anywhere
                         </h1>
@@ -58,24 +66,44 @@
                             where you are. Order now and enjoy a hassle-free and
                             delicious meal from the comfort of your own home.
                         </p>
-                        <button class="button hero-btn" type="button">
+                        <button class="hero-btn" type="button" data-modal-open>
                             Order Now
                         </button>
                     </div>
-                    <div class="hero-img-wrapper">
+
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/hero-img/hero-img-@1x.jpg 1x,
+                                ./images/hero-img/hero-img-@2x.jpg 2x
+                            "
+                        />
                         <img
-                            src="./images/hero-section-img.jpg"
+                            class="hero-img"
+                            src="./images/hero-img/hero-img-@1x.jpg"
                             alt="Greek salad in a glass bowl"
                             width="528"
                         />
-                    </div>
+                    </picture>
                 </div>
             </section>
             <section class="benefits-section">
                 <div class="container benefits-container">
-                    <div class="benefits-img-wrapper">
-                        <img src="./images/green-apple.png" alt="Green apple" />
-                    </div>
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/benefits-img-@1x.jpg 1x,
+                                ./images/benefits-img-@2x.jpg 2x
+                            "
+                        />
+                        <img
+                            class="benefits-img"
+                            src="./images/benefits-img-@1x.jpg"
+                            alt="Green apple"
+                            width="550"
+                        />
+                    </picture>
+
                     <div class="benefits-text-wrapper">
                         <h2 class="benefits-title">
                             What's Special About Our Offerings
@@ -129,7 +157,11 @@
                                 </p>
                             </li>
                         </ul>
-                        <button class="button benefits-btn" type="button">
+                        <button
+                            class="button benefits-btn"
+                            type="button"
+                            data-modal-open
+                        >
                             Order Now
                         </button>
                     </div>
@@ -143,127 +175,369 @@
                     </p>
                     <ul class="offerings-list">
                         <li class="offerings-item">
-                            <a class="offerings-link" href="#"
-                                ><img
-                                    src="./images/hamburger.jpg"
-                                    alt="Hamburger"
-                                    width="315"
-                            /></a>
-                        </li>
-                        <li class="offerings-item">
                             <a class="offerings-link" href="#">
-                                <img
-                                    src="./images/pasta.jpg"
-                                    alt="Pasta"
-                                    width="315"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/hamburger-@1x.jpg 1x,
+                                            ./images/offerings-img/hamburger-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/hamburger-@1x.jpg"
+                                        alt="Hamburger"
+                                        width="315"
+                                    />
+                                </picture>
                             </a>
                         </li>
                         <li class="offerings-item">
                             <a class="offerings-link" href="#">
-                                <img
-                                    src="./images/pizza.jpg"
-                                    alt="Pizza"
-                                    width="315"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/pasta-@1x.jpg 1x,
+                                            ./images/offerings-img/pasta-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/pasta-@1x.jpg"
+                                        alt="Pasta"
+                                        width="315"
+                                    />
+                                </picture>
                             </a>
                         </li>
                         <li class="offerings-item">
                             <a class="offerings-link" href="#">
-                                <img
-                                    src="./images/chicken.jpg"
-                                    alt="Chicken and rice"
-                                    width="315"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/pizza-@1x.jpg 1x,
+                                            ./images/offerings-img/pizza-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/pizza-@1x.jpg"
+                                        alt="Pizza"
+                                        width="315"
+                                    />
+                                </picture>
                             </a>
                         </li>
                         <li class="offerings-item">
                             <a class="offerings-link" href="#">
-                                <img
-                                    src="./images/salad.jpg"
-                                    alt="Vegetable salad"
-                                    width="315"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/chicken-@1x.jpg 1x,
+                                            ./images/offerings-img/chicken-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/chicken-@1x.jpg"
+                                        alt="Chicken and rice"
+                                        width="315"
+                                    />
+                                </picture>
                             </a>
                         </li>
                         <li class="offerings-item">
                             <a class="offerings-link" href="#">
-                                <img
-                                    src="./images/borshch.jpg"
-                                    alt="Soup borshch"
-                                    width="315"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/salad-@1x.jpg 1x,
+                                            ./images/offerings-img/salad-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/salad-@1x.jpg"
+                                        alt="Vegetable salad"
+                                        width="315"
+                                    />
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="offerings-item">
+                            <a class="offerings-link" href="#">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/offerings-img/borshch-@1x.jpg 1x,
+                                            ./images/offerings-img/borshch-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/offerings-img/borshch-@1x.jpg"
+                                        alt="Soup borshch"
+                                        width="315"
+                                    />
+                                </picture>
                             </a>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="reviews-section">
-                <h2 class="section-title">What our Customers Say</h2>
-                <p class="reviews-text">
-                    Don't just take our word for it - see what our satisfied
-                    customers have to say
-                </p>
-                <!-- Додати список відгуків -->
+                <div class="container">
+                    <h2 class="reviews-title">What our Customers Say</h2>
+                    <p class="reviews-text">
+                        Don't just take our word for it - see what our satisfied
+                        customers have to say
+                    </p>
+                    <ul class="reviews-list">
+                        <li class="reviews-item">
+                            <svg class="reviews-icon" width="100" height="16">
+                                <use
+                                    href="./images/icons.svg#icon-review"
+                                ></use>
+                            </svg>
+
+                            <p class="reviews-text-bold">
+                                &quot;The Best app I have used to order food in
+                                a while, so many options to choose from too, I
+                                would recommend to a friend, No questions
+                                asked&quot;
+                            </p>
+
+                            <div class="reviews-wrapper">
+                                <img
+                                    class="reviews-img"
+                                    src="./images/reviews-img/reviewer-1-@1x.jpg"
+                                    alt="Young man"
+                                />
+                                <div class="reviews-text-wrapper">
+                                    <p class="reviews-text-wrapper-subtitle">
+                                        Matthew Christenson
+                                    </p>
+                                    <p class="reviews-text-wrapper-text">
+                                        Some Dude
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews-item">
+                            <svg class="reviews-icon" width="100" height="16">
+                                <use
+                                    href="./images/icons.svg#icon-review"
+                                ></use>
+                            </svg>
+
+                            <p class="reviews-text-bold">
+                                &quot;The ease with which I can just go in and
+                                order what i want was amazing, It has been a
+                                very pleasant experience ordering from this
+                                app&quot;
+                            </p>
+
+                            <div class="reviews-wrapper">
+                                <img
+                                    class="reviews-img"
+                                    src="./images/reviews-img/reviewer-2-@1x.jpg"
+                                    alt="Young woman"
+                                />
+                                <div class="reviews-text-wrapper">
+                                    <p class="reviews-text-wrapper-subtitle">
+                                        Micha Drews
+                                    </p>
+                                    <p class="reviews-text-wrapper-text">
+                                        Some Dude
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="subscribe-section">
-                <h2 class="section-title">Subscribe To Get Special Offers</h2>
-                <p class="subscribe-section-text">
-                    Order now and receive 10% off your first meal with Enjoy
-                    Your Favorite Food From Anywhere.
-                </p>
-                <!-- Додати рядок для підписки -->
-                <button class="subscribe-button" type="button">
-                    Subscribe
-                </button>
-                <img src="./images/banan.jpg" alt="Banan" />
+                <div class="container subscribe-container">
+                    <div class="subscribe-wrapper">
+                        <h2 class="subscribe-title">
+                            Subscribe To Get Special Offers
+                        </h2>
+                        <p class="subscribe-text">
+                            Order now and receive 10% off your first meal with
+                            Enjoy Your Favorite Food From Anywhere.
+                        </p>
+
+                        <form class="subscribe-form">
+                            <label
+                                for="subscribe-user-email"
+                                class="subscribe-form-label"
+                            >
+                                <input
+                                    type="email"
+                                    name="subscribe-user-email"
+                                    id="subscribe-user-email"
+                                    class="subscribe-form-input"
+                                    placeholder="Enter your email"
+                                />
+                            </label>
+                            <button class="button subscribe-btn" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                    <picture>
+                        <source
+                            srcset="
+                                ./images/subscribe-img-@1x.png 1x,
+                                ./images/subscribe-img-@2x.png 2x
+                            "
+                        />
+                        <img
+                            class="subscribe-img"
+                            src="./images/subscribe-img-@1x.png"
+                            alt="Yellow banan"
+                        />
+                    </picture>
+                </div>
             </section>
         </main>
         <footer class="footer">
-            <a href="/">
-                <img
-                    src="./images/food-delivery-logo.svg"
-                    alt="Food delivery logo"
-                />
-            </a>
-            <ul class="footer-list">
-                <li class="footer-item">
-                    <a class="footer-link" href="/">Home</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-link" href="">About</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-link" href="">Service</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-link" href="">Menu</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-link" href="">Contact</a>
-                </li>
-            </ul>
-            <h3 class="footer-action-text">Subscribe</h3>
-            <!-- Додати рядок для підписки -->
-            <button class="footer-button" type="button">Subscribe</button>
-            <p class="footer-text">
-                By subscribing you agree to with our
-                <a href="#"
-                    ><span class="footer-text-accent">Privacy Policy</span></a
-                >
-            </p>
-            <ul>
-                <li>
-                    <a class="footer-policy-link" href="#">Privacy Policy</a>
-                </li>
-                <li>
-                    <a class="footer-policy-link" href="#">Terms of Service</a>
-                </li>
-                <li>
-                    <a class="footer-policy-link" href="#">Cookies Settings</a>
-                </li>
-            </ul>
-            <p class="footer-text">2022 FoodSta. All right reserved.</p>
+            <div class="container footer-container">
+                <div class="footer-top-wrapper">
+                    <nav class="footer-navbar">
+                        <a class="footer-logo" href="/">
+                            <svg class="footer-icon" width="66" height="52">
+                                <use href="./images/icons.svg#icon-logo"></use>
+                            </svg>
+                        </a>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a class="footer-link" href="/">Home</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link" href="">About</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link" href="">Service</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link" href="">Menu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link" href="">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer-form-wrapper">
+                        <h3 class="footer-subtitle">Subscribe</h3>
+
+                        <form class="footer-form">
+                            <label
+                                class="footer-form-label"
+                                for="footer-user-email"
+                            >
+                                <input
+                                    class="footer-form-input"
+                                    type="email"
+                                    name="footer-user-email"
+                                    id="footer-user-email"
+                                    placeholder="Enter your email"
+                                />
+                            </label>
+                            <button class="footer-btn" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+
+                        <p class="subscribe-policy-text">
+                            By subscribing you agree to with our
+                            <a class="subscribe-policy-link" href="#">
+                                Privacy Policy</a
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom-wrapper">
+                    <ul class="footer-policy-list">
+                        <li class="footer-policy-item">
+                            <a
+                                class="footer-policy-link"
+                                href="#"
+                                target="_blank"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                        <li class="footer-policy-item">
+                            <a
+                                class="footer-policy-link"
+                                href="#"
+                                target="_blank"
+                                >Terms of Service</a
+                            >
+                        </li>
+                        <li class="footer-policy-item">
+                            <a
+                                class="footer-policy-link"
+                                href="#"
+                                target="_blank"
+                                >Cookies Settings</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="footer-copyright-text">
+                        2022 FoodSta. All right reserved.
+                    </p>
+                </div>
+            </div>
         </footer>
+
+        <div class="backdrop" data-modal>
+            <div class="modal">
+                <button class="modal-close-btn" type="button" data-modal-close>
+                    <svg class="modal-close-icon" width="12" height="12">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+
+                <p class="modal-text">Order Form</p>
+                <form class="modal-form">
+                    <div class="modal-form-field">
+                        <label class="modal-form-label" for="user-name"
+                            >Name</label
+                        >
+                        <input
+                            class="modal-form-input"
+                            type="text"
+                            id="user-name"
+                            name="user-name"
+                            placeholder="Your name"
+                        />
+                    </div>
+                    <div class="modal-form-field">
+                        <label class="modal-form-label" for="user-phone"
+                            >Phone number</label
+                        >
+                        <input
+                            class="modal-form-input"
+                            type="phone"
+                            id="user-phone"
+                            name="user-phone"
+                            placeholder="+38(0_ _)_ _ _  _ _  _ _"
+                        />
+                    </div>
+                    <div class="modal-form-field">
+                        <label class="modal-form-label" for="user-email"
+                            >E-mail</label
+                        >
+                        <input
+                            class="modal-form-input"
+                            type="email"
+                            id="user-email"
+                            name="user-email"
+                            placeholder="example@gmail.com"
+                        />
+                    </div>
+
+                    <button class="modal-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="./js/modal.js"></script>
     </body>
 </html>
