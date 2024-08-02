@@ -24,7 +24,7 @@
     <body>
         <header class="header">
             <div class="container header-container">
-                <a class="header-logo" href="/">
+                <a class="header-logo" href="/index.html">
                     <svg class="logo-icon" width="66" height="52">
                         <use href="./images/icons.svg#icon-logo"></use>
                     </svg>
@@ -32,7 +32,7 @@
                 <nav class="header-navbar">
                     <ul class="header-list">
                         <li class="header-item">
-                            <a class="header-link" href="/">Home</a>
+                            <a class="header-link" href="/index.html">Home</a>
                         </li>
                         <li class="header-item">
                             <a class="header-link" href="">About</a>
@@ -48,9 +48,50 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="header-btn" type="button" data-modal-open>
-                    Order Now
+                <button class="header-btn" type="button">Order Now</button>
+
+                <button class="burger-menu" type="button" data-menu-open>
+                    <svg class="burger-icon" width="28" height="28">
+                        <use href="./images/icons.svg#icon-burger-menu"></use>
+                    </svg>
                 </button>
+
+                <div class="mobile-menu" data-menu>
+                    <button
+                        class="mobile-menu-close-btn"
+                        type="button"
+                        data-menu-close
+                    >
+                        <svg
+                            class="mobile-menu-close-icon"
+                            width="12"
+                            height="12"
+                        >
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <nav class="mobile-menu-navbar">
+                        <ul class="mobile-menu-list">
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="./index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="#">About</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="#">Service</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="#">Menu</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
         <main>
@@ -71,15 +112,22 @@
                         </button>
                     </div>
 
-                    <picture>
+                    <picture class="hero-img">
                         <source
+                            media="(max-width:1278px)"
+                            srcset="
+                                ./images/hero-img/hero-img-tab-@1x.jpg 1x,
+                                ./images/hero-img/hero-img-tab-@2x.jpg 2x
+                            "
+                        />
+                        <source
+                            media="(min-width:1279px)"
                             srcset="
                                 ./images/hero-img/hero-img-@1x.jpg 1x,
-                                ./images/hero-img/hero-img-@2x.jpg 2x
+                                /images/hero-img/hero-img-@2x.jpg  2x
                             "
                         />
                         <img
-                            class="hero-img"
                             src="./images/hero-img/hero-img-@1x.jpg"
                             alt="Greek salad in a glass bowl"
                             width="528"
@@ -89,7 +137,7 @@
             </section>
             <section class="benefits-section">
                 <div class="container benefits-container">
-                    <picture>
+                    <picture class="benefits-img">
                         <source
                             srcset="
                                 ./images/benefits-img-@1x.jpg 1x,
@@ -97,7 +145,6 @@
                             "
                         />
                         <img
-                            class="benefits-img"
                             src="./images/benefits-img-@1x.jpg"
                             alt="Green apple"
                             width="550"
@@ -128,7 +175,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="benefits-subtitle">
-                                    Fasest Delivery
+                                    Fastest Delivery
                                 </h3>
                                 <p class="benefits-subtext">
                                     Our advanced logistics system and dedicated
@@ -157,6 +204,7 @@
                                 </p>
                             </li>
                         </ul>
+
                         <button
                             class="button benefits-btn"
                             type="button"
@@ -164,6 +212,19 @@
                         >
                             Order Now
                         </button>
+
+                        <a href="#" class="benefits-mobile-link" target="_blank"
+                            >Read More
+                            <svg
+                                class="benefits-mobile-icon"
+                                width="6"
+                                height="10"
+                            >
+                                <use
+                                    href="./images/icons.svg#icon-chevron"
+                                ></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -302,11 +363,20 @@
                             </p>
 
                             <div class="reviews-wrapper">
-                                <img
-                                    class="reviews-img"
-                                    src="./images/reviews-img/reviewer-1-@1x.jpg"
-                                    alt="Young man"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/reviews-img/reviewer-1-@1x.jpg 1x,
+                                            ./images/reviews-img/reviewer-1-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        class="reviews-img"
+                                        src="./images/reviews-img/reviewer-1-@1x.jpg"
+                                        alt="Young man"
+                                    />
+                                </picture>
+
                                 <div class="reviews-text-wrapper">
                                     <p class="reviews-text-wrapper-subtitle">
                                         Matthew Christenson
@@ -332,11 +402,20 @@
                             </p>
 
                             <div class="reviews-wrapper">
-                                <img
-                                    class="reviews-img"
-                                    src="./images/reviews-img/reviewer-2-@1x.jpg"
-                                    alt="Young woman"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/reviews-img/reviewer-2-@1x.jpg 1x,
+                                            ./images/reviews-img/reviewer-2-@2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        class="reviews-img"
+                                        src="./images/reviews-img/reviewer-2-@1x.jpg"
+                                        alt="Young woman"
+                                    />
+                                </picture>
+
                                 <div class="reviews-text-wrapper">
                                     <p class="reviews-text-wrapper-subtitle">
                                         Micha Drews
@@ -352,6 +431,27 @@
             </section>
             <section class="subscribe-section">
                 <div class="container subscribe-container">
+                    <picture class="subscribe-img">
+                        <source
+                            media="(max-width: 767px)"
+                            srcset="
+                                ./images/subscribe-img-mob-@1x.png 1x,
+                                ./images/subscribe-img-mob-@2x.png 2x
+                            "
+                        />
+                        <source
+                            media="(min-width:768px)"
+                            srcset="
+                                ./images/subscribe-img-@1x.png 1x,
+                                ./images/subscribe-img-@2x.png 2x
+                            "
+                        />
+                        <img
+                            class="subscribe-img"
+                            src="./images/subscribe-img-@1x.png"
+                            alt="Yellow banan"
+                        />
+                    </picture>
                     <div class="subscribe-wrapper">
                         <h2 class="subscribe-title">
                             Subscribe To Get Special Offers
@@ -379,20 +479,6 @@
                             </button>
                         </form>
                     </div>
-
-                    <picture>
-                        <source
-                            srcset="
-                                ./images/subscribe-img-@1x.png 1x,
-                                ./images/subscribe-img-@2x.png 2x
-                            "
-                        />
-                        <img
-                            class="subscribe-img"
-                            src="./images/subscribe-img-@1x.png"
-                            alt="Yellow banan"
-                        />
-                    </picture>
                 </div>
             </section>
         </main>
@@ -400,14 +486,16 @@
             <div class="container footer-container">
                 <div class="footer-top-wrapper">
                     <nav class="footer-navbar">
-                        <a class="footer-logo" href="/">
+                        <a class="footer-logo" href="/index.html">
                             <svg class="footer-icon" width="66" height="52">
                                 <use href="./images/icons.svg#icon-logo"></use>
                             </svg>
                         </a>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a class="footer-link" href="/">Home</a>
+                                <a class="footer-link" href="/index.html"
+                                    >Home</a
+                                >
                             </li>
                             <li class="footer-item">
                                 <a class="footer-link" href="">About</a>
@@ -538,6 +626,7 @@
             </div>
         </div>
 
+        <script src="./js/menu.js"></script>
         <script src="./js/modal.js"></script>
     </body>
 </html>
